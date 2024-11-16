@@ -114,5 +114,4 @@ After the scripts above, add:
 ![End result showing a reactive Svelte component styled globally with bootstrap.](docs/result.png)
 
 The steps outlined here are usable for other bundlers too.
-There may be a better way to go about this, but this will work for incremental enablement component.
 The setup difficulty IMO is worth it than the technical debt and maintenance headache of glue logic.
