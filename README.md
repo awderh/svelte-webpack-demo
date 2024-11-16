@@ -1,5 +1,7 @@
 # Svelte Webpack Demo
 
+See it live [here](https://awderh.github.io/svelte-webpack-demo/)
+
 ## Add svelte globally
 
 ```js
