@@ -51,7 +51,30 @@ module.exports = {
 }
 ```
 
-## Create entrypoint
+## Create component and entrypoint
+
+In `src/Counter.svelte`, let's define the following:
+
+```svelte
+<script>
+    export let count = 0;
+
+    console.log("Counter loaded!");
+
+    export function handleClick() {
+        count += 1;
+        return count;
+    }
+
+    export const getCount = () => count;
+</script>
+
+<button class="counter btn btn-primary" on:click={handleClick}>
+    clicks: {count}
+</button>
+```
+
+And, we'll have the bundler make us a `.js` distributable:
 
 ```js
 module.exports = {
@@ -121,4 +144,4 @@ After the scripts above, add:
 ![End result showing a reactive Svelte component styled globally with bootstrap.](docs/result.png)
 
 The steps outlined here are usable for other bundlers too.
-The setup difficulty IMO is worth it than the technical debt and maintenance headache of glue logic.
+The setup difficulty is less burdensome the technical debt and maintenance headache of glue logic.

@@ -1,16 +1,16 @@
 <script>
-	export let count = 0;
+    export let count = 0;
 
-	console.log("Counter loaded!")
-	
-	export function handleClick() {
-		count += 1;
-		return count;
-	}
+    console.log("Counter loaded!");
 
-	export const getCount = () => count;
+    export function handleClick() {
+        count += 1;
+        return count;
+    }
+
+    export const getCount = () => count;
 </script>
 
 <button class="counter btn btn-primary" on:click={handleClick}>
-	clicks: {count}
+    clicks: {count}
 </button>
