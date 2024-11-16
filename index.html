@@ -22,11 +22,24 @@
             <script src="dist/Counter.js"></script>
             <script>
                 const container = document.getElementById('counter-container')
-                svelte.mount(Counter,
+                const counter = svelte.mount(Counter,
                     {
                         target: container
                     }
                 );
+            </script>
+            <hr />
+            <p>Click the following button to retrieve the count from the Svelte component.</p>
+            <button id="get-count-button" class="btn btn-secondary">Get Count</button>
+            <p id="count"></p>
+            <script>
+                const updateBtn = document.getElementById('get-count-button')
+
+                updateBtn.onclick = () => {
+                    const count = counter.getCount();
+                    const targetElem = document.getElementById('count')
+                    targetElem.innerText = `The count is: ${count}`;
+                }
             </script>
         </div>
 

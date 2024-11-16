@@ -23,6 +23,8 @@ module.exports = {
 
 ## Setup loader
 
+Add the [svelte-loader]()
+
 ```js
 module.exports = {
     ...
