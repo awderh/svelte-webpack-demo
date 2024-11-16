@@ -24,7 +24,10 @@
                 const container = document.getElementById('counter-container')
                 const counter = svelte.mount(Counter,
                     {
-                        target: container
+                        target: container,
+                        props: {
+                            count: 1
+                        }
                     }
                 );
             </script>

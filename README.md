@@ -100,16 +100,21 @@ If you skip this step, you will get an obscure error along the lines of:
 
 After the scripts above, add:
 
-```js
+```html
 <script>
     const container = document.getElementById('counter-container')
-    svelte.mount(Counter,
+    const counter = svelte.mount(Counter,
         {
-            target: container
+            target: container,
+            props: {
+                count: 1
+            }
         }
     );
 </script>
 ```
+
+*Notice, we initialized the count to 1 by providing it as a property.*
 
 ## Profit
 
