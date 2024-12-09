@@ -94,7 +94,7 @@ module.exports = {
 
 ### Change webpack optimizations
 
-Since we have multiple entrypoints that will have overlap (e.g., svelte
+Since we have multiple entry points that will overlap (e.g., svelte
 internals in this case), we will use a single runtime. The runtime in
 Webpack takes care of loading for us.
 
